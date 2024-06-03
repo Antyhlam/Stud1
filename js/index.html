@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Чайные стаканы мечты</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Стаканы для чая - наслаждайтесь каждым глотком</h1>
+            <p>Погружайтесь в мир аромата с нашими стильными и удобными стаканами для чая.</p>
+        </div>
+    </header>
+
+    <main>
+        <div class="tabs">
+            <button class="tab active" data-target="tab1">Товары</button>
+            <button class="tab" data-target="tab2">Акция</button>
+            <button class="tab" data-target="tab3">Чайная магия</button>
+        </div>
+
+        <div class="tab-content" id="tab1">
+            <h2>Чайные стаканы, которые полюбят ваши чувства</h2>
+            <p>Наши стаканы - это не просто посуда, это  вдохновение для каждого чаепития.  Сделайте  каждый момент особенным!</p>
+            <div class="input-container">
+                <label for="userName">Введите ваше имя:</label>
+                <input type="text" id="userName" name="userName" placeholder="Ваше имя">
+                <span id="greeting"></span>
+            </div>
+            <div class="features-grid">
+                <div class="feature">
+                    <span class="feature-icon">🍵</span>
+                    <h3>Стильный дизайн</h3>
+                    <p>Разнообразие форм, цветов и материалов - найдите идеальный стакан для себя.</p>
+                </div>
+                <div class="feature">
+                    <span class="feature-icon">☕</span>
+                    <h3>Высокое качество</h3>
+                    <p>Изготовлены из прочных материалов, долговечны и легко моются.</p>
+                </div>
+                <div class="feature">
+                    <span class="feature-icon">🔥</span>
+                    <h3>Удобство</h3>
+                    <p>Комфортная форма, приятная на ощупь, идеальны для горячих напитков.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="tab-content" id="tab2" style="display: none;">
+            <h2>Акция! Бесплатный чайный пакетик только до конца дня!</h2>
+            <div class="clock">
+                <div class="hour-hand"></div>
+                <div class="minute-hand"></div>
+                <div class="second-hand"></div>
+                <div class="center-dot"></div>
+            </div>
+        </div>
+
+        <div class="tab-content" id="tab3" style="display: none;">
+            <h2>Чайная магия чайного листа</h2>
+            <p>PS: нажми пробел</p>
+            <div class="tea-magic-container">
+                <div class="handle"></div>
+                <div class="tea-cup">
+                    <div class="tea-leaf"></div>
+                    <div class="steam"></div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2023 Чайные стаканы мечты. Все права защищены.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

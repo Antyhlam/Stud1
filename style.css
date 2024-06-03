@@ -1,0 +1,248 @@
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f0;
+    color: #333;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+h1, h2, h3 {
+    color: #333;
+    margin-bottom: 10px;
+}
+
+p {
+    color: #555;
+    line-height: 1.6;
+}
+
+/* Заголовок */
+header {
+    background-color: #fff;
+    padding: 20px 0;
+    text-align: center;
+}
+
+/* Закладки */
+.tabs {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.tab {
+    padding: 10px 20px;
+    margin: 0 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    cursor: pointer;
+    background-color: #fff;
+    transition: background-color 0.3s ease;
+}
+
+.tab.active {
+    background-color: #ff9900;
+    color: #fff;
+}
+
+/* Содержимое закладок */
+.tab-content {
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #fff;
+    text-align: center;
+}
+
+/* Преимущества */
+.features-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+.feature {
+    text-align: center;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.feature-icon {
+    font-size: 3em;
+    color: #ff9900;
+    margin-bottom: 10px;
+}
+
+/* Форма ввода имени */
+.input-container {
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+    width: 300px; /* Ограничение ширины */
+    margin-left: auto; /* Выравнивание по центру */
+    margin-right: auto;
+}
+
+.input-container label {
+    margin-bottom: 5px;
+}
+
+.input-container input {
+    padding: 8px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.input-container #greeting {
+    margin-top: 5px;
+    color: #ff9900;
+}
+
+.tea-magic-container {
+    width: 300px;
+    height: 300px;
+    margin: 20px auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f8f8f8;
+    border-radius: 50%;
+    position: relative;
+    overflow: hidden;
+}
+
+.tea-cup {
+    width: 100px;
+    height: 150px;
+    background-color: #fff;
+    border: 2px solid #ccc;
+    border-radius: 10px;
+    position: relative;
+    overflow: hidden; /* Добавлено для ограничения движения чайного листа */
+}
+
+.handle {
+    width: 60px;
+    height: 30px;
+    background-color: #cccccc;
+    position: absolute;
+    right: 80px;
+    top: 85px;
+    border-radius: 0 0 20px 20px;
+    transform-origin: right bottom;
+    transform: rotate(-90deg);
+}
+
+.tea-leaf {
+    width: 20px;
+    height: 20px;
+    background-color: #805020;
+    position: absolute;
+    top: 20px;
+    left: 40px;
+    animation: teaLeafSpin 3s linear infinite;
+}
+
+.steam {
+    width: 0;
+    height: 0;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-bottom: 20px solid #fff;
+    position: absolute;
+    top: 50px;
+    left: 40px;
+    animation: steamAnimation 1s ease-in-out infinite alternate;
+}
+
+@keyframes steamAnimation {
+    0% { transform: translateY(0); opacity: 1; }
+    100% { transform: translateY(-10px); opacity: 0.5; }
+}
+
+@keyframes teaLeafSpin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* Футер */
+footer {
+    background-color: #333;
+    color: #fff;
+    padding: 10px 0;
+    text-align: center;
+}
+
+.clock {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    background-color: #f8f8f8;
+    position: relative;
+    margin: 20px auto;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    transition: background-color 0.3s ease; /* Добавлено для плавного перехода */
+}
+
+.clock:hover {
+    background-color: #ff9900; /* Цвет при наведении */
+}
+
+.hour-hand, .minute-hand, .second-hand {
+    position: absolute;
+    left: 50%;
+    bottom: 50%;
+    transform-origin: bottom center;
+    background-color: #333;
+}
+
+.hour-hand {
+    width: 5px;
+    height: 40px;
+    transform: translateX(-50%) rotate(90deg);
+}
+
+.minute-hand {
+    width: 3px;
+    height: 60px;
+    transform: translateX(-50%) rotate(90deg);
+}
+
+.second-hand {
+    width: 2px;
+    height: 70px;
+    background-color: #3bbb19;
+    transform: translateX(-50%) rotate(90deg);
+}
+
+.center-dot {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 10px;
+    height: 10px;
+    background-color: #333;
+    border-radius: 50%;
+}
+
+.clock::before {
+    content: '';
+    position: absolute;
+    left: 50%;
+    top: 10px; /* Отступ от верха */
+    transform: translateX(-50%);
+    width: 2px;
+    height: 30px;
+    background-color: #ff0000; /* Красный цвет */
+    border-radius: 2px;
+}
